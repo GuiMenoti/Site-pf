@@ -120,3 +120,39 @@ window.addEventListener("click", function(event) {
     mapModal.style.display = "none";
   }
 });
+
+
+//modal
+
+document.addEventListener('DOMContentLoaded', function () {
+  const modalButtons = document.querySelectorAll('[data-modal-target]');
+  const closeButtons = document.querySelectorAll('[data-modal-close]');
+  const modals = document.querySelectorAll('.modal');
+
+  modalButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const target = document.getElementById(button.dataset.modalTarget);
+      target.style.display = 'block';
+    });
+  });
+
+  closeButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const modal = button.closest('.modal');
+      modal.style.display = 'none';
+    });
+  });
+
+  modals.forEach(modal => {
+    modal.addEventListener('click', e => {
+      if (e.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+  });
+});
+
+function toggleSubdivisions() {
+  var subdivisions = document.getElementById("subdivisoes");
+  subdivisions.style.display = subdivisions.style.display === "none" ? "flex" : "none";
+}

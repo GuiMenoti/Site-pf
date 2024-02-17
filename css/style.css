@@ -80,9 +80,10 @@ section{
 }
 
 .heading span{
-   color: red;
+   color: rgb(255, 255, 255);
    text-transform: uppercase;
 }
+
 
 .header {
    position: fixed;
@@ -238,7 +239,7 @@ section{
 }
 
 .courses .slide img{
-   height: 25rem;
+   
    width: 100%;
 }
 
@@ -714,6 +715,10 @@ footer .credit span
  justify-content: center;
 }
 
+.imagecntr {
+   border-radius: 25px;
+}
+
 .photo {
  margin: 0 20px;
  position: relative;
@@ -740,3 +745,136 @@ footer .credit span
 .photo:hover .photo-image {
  filter: none; /* Remove o efeito de desfoque ao passar o mouse */
 }
+
+/* subdivisões */
+
+@keyframes gradientBG {
+   0% {
+     background-position: 0% 50%;
+   }
+   50% {
+     background-position: 100% 50%;
+   }
+   100% {
+     background-position: 0% 50%;
+   }
+ }
+ 
+ .subdivisoes {
+   display: flex;
+   justify-content: center;
+   gap: 40px;
+   padding: 20px;
+ }
+ .subdivisao img {
+   width: 100%;
+   border-top-left-radius: 10px;
+   border-top-right-radius: 10px;
+ }
+
+ .fundbtn {
+   background: linear-gradient(to right, #ffffff, #000000, #313131);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  border-radius: 20px;
+
+ }
+ 
+ .subdivisao-btn {
+   padding: 15px 40px;
+   font-size: 18px;
+   background-color: #fffb00;
+   color: #000000;
+   border: none;
+ 
+   border-radius: 5px;
+   cursor: pointer;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s;
+ }
+ 
+ .subdivisao-btn:hover {
+   transform: translateY(-2px);
+   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+   background-color: #b30000;
+ }
+ 
+ .modal {
+   display: none;
+   position: fixed;
+   z-index: 1000;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.5);
+ }
+ 
+ .modal-content {
+   position: absolute;
+   top: 30%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   background-color: #fff;
+   padding: 20px;
+   border-radius: 10px;
+   max-width: 800px; /* Defina a largura máxima que você deseja que o texto tenha */
+  max-height: 900px; /* Defina a altura máxima que você deseja que o texto tenha */
+  overflow-y: auto; 
+ }
+ 
+ .close-button {
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   font-size: 24px;
+   cursor: pointer;
+ }
+ 
+ .modal-content h2 {
+   margin-top: 0;
+   font-size: 18px;
+ }
+ 
+ .modal-content p {
+   margin-bottom: 15px;
+   font-size: 14px;
+ }
+ 
+ .modal-content a {
+   display: inline-block;
+   text-decoration: none;
+   color: #007bff;
+   font-weight: bold;
+ }
+ 
+ .modal-content a:hover {
+   text-decoration: underline;
+ }
+
+ .open-btn {
+   padding: 15px 30px;
+   font-size: 18px;
+   background-color: #ff0000;
+   color: #fff;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s;
+
+ }
+ 
+ .open-btn:hover {
+   transform: translateY(-2px);
+   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+   background-color: #f0ec07;
+ }
+
+ .open-btn-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 10vh;
+ }
+ 
