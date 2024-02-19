@@ -173,8 +173,13 @@ section{
    align-items: center;
    justify-content: center;
    gap:2.5rem;
+   transition: all 0.3s ease;
+   cursor: pointer;
 }
-
+.count .box-countainer .box:hover {
+   transform: scale(1.1); /* Aumenta ligeiramente o tamanho no hover */
+   background-color: #ddd; /* Muda a cor de fundo no hover */
+ }
 .count .box-countainer .box i{
    font-size: 5rem;
    color: RED;
@@ -355,6 +360,7 @@ section{
    align-items: center;
    flex-wrap: wrap;
    gap: 1.5rem;
+   border-radius: 20px;
 
 }
 .contact .row .image
@@ -530,17 +536,23 @@ footer .credit span
 .carousel {
    position: relative;
    max-width: 800px;
-   margin: 0 auto;
    overflow: hidden;
+   border: 0.5px solid rgb(255, 255, 255);
+   border-radius: 100px;
+   
+  
  }
  
  .carousel-inner {
    display: flex;
    transition: transform 0.5s ease;
+   
+  
  }
  
  .carousel-inner img {
    width: 100%;
+  
  }
  
  .carousel button {
@@ -556,7 +568,7 @@ footer .credit span
  }
  
  .carousel button:hover {
-   background: #555;
+   background: #181818;
  }
  
  .prev {
@@ -601,7 +613,37 @@ footer .credit span
    transform: translate(-50%, -50%) scale(2);
    opacity: 0;
  }
-
+ .image {
+   position: relative;
+ }
+ 
+ .border-animation {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   border-radius: 10px; /* ajuste conforme necessário */
+   animation: borderChange 3s infinite linear; /* Definindo a animação */
+ }
+ 
+ @keyframes borderChange {
+   0% {
+     border: 3px solid red; /* Cor inicial */
+   }
+   25% {
+     border: 3px solid rgb(3, 3, 3); /* Cor intermediária */
+   }
+   50% {
+     border: 3px solid rgb(243, 6, 6); /* Cor intermediária */
+   }
+   75% {
+     border: 3px solid rgb(12, 12, 12); /* Cor intermediária */
+   }
+   100% {
+     border: 3px solid red; /* Cor final */
+   }
+ }
 
  /* modal */
 
